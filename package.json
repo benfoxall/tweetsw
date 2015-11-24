@@ -1,0 +1,25 @@
+{
+  "name": "tweetsw",
+  "version": "1.0.0",
+  "description": "A twitter service worker thing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benfoxall/tweetsw.git"
+  },
+  "author": "Ben Foxall @benjaminbenben",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benfoxall/tweetsw/issues"
+  },
+  "homepage": "https://github.com/benfoxall/tweetsw#readme",
+  "dependencies": {
+    "dotenv": "^1.2.0",
+    "express": "^4.13.3",
+    "pusher": "^1.0.6",
+    "tweets": "0.0.6"
+  }
+}
