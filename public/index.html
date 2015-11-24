@@ -7,12 +7,33 @@
     <body>
         <h1>Tweet SW</h1>
 
-        <ul id="tweets">
+        <ul>
+            <li>
+                <a href="/stats.json" />stats.json</a>
+            </li>
+            <li>
+                <a href="/last.txt" />last.txt</a>
+            </li>
+            <li>
+                <a href="/last.json" />last.json</a>
+            </li>
+            <li>
+                <a href="/tweets.csv" />tweets.csv</a>
+            </li>
+            <li>
+                <a href="/tweets.html" />tweets.html</a>
+            </li>
         </ul>
 
+
         <script>
-            // service worker debug
-            new Worker('sw.js')
+          navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ',    registration.scope);
+          }).catch(function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
         </script>
     </body>
 </html>
