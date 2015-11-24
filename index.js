@@ -34,4 +34,4 @@ app.get('/key', function(req, res){
     res.send(process.env.PUSHER_APP_KEY);
 });
 
-app.listen(3000);
+app.listen(4444);
