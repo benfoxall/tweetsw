@@ -29,7 +29,6 @@ stream.on('tweet', function(t){
 var app = express();
 
 app.use(express.static('public'));
-app.use(express.static('node_modules/pusher-js/dist'));
 
 app.get('/key', function(req, res){
     res.send(process.env.PUSHER_APP_KEY);
