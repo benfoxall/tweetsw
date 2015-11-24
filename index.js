@@ -17,7 +17,7 @@ var pusher = new Pusher({
 });
 
 
-stream.filter({track: 'pizza'});
+stream.filter({track: 'java'});
 
 stream.on('tweet', function(t){
   console.log("Got a tweet!", t.text);
