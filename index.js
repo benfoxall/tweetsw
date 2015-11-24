@@ -2,6 +2,7 @@ require('dotenv').load();
 
 var Tweets = require('tweets');
 var Pusher = require('pusher');
+var express = require('express');
 
 var stream = new Tweets({
   consumer_key:        process.env.TWITTER_CONSUMER_KEY,
@@ -24,3 +25,13 @@ stream.on('tweet', function(t){
 
   pusher.trigger('all', 'tweet', t);
 });
+
+var app = express();
+
+app.use(express.static('public'));
+
+app.get('/key', function(req, res){
+    res.send(process.env.PUSHER_APP_KEY);
+});
+
+app.listen(3000);
