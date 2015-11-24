@@ -10,27 +10,9 @@
         <ul id="tweets">
         </ul>
 
-        <script src="pusher.js"></script>
         <script>
-            fetch('/key')
-                .then(function(r) {
-                    return r.text()
-                })
-                .then(function(key){
-                    var pusher = new Pusher(key, {
-                        encrypted: true
-                    });
-                    var channel = pusher.subscribe('all');
-                    channel.bind('tweet', function(data) {
-
-                        var li = document.createElement('li');
-                        li.innerText = data.text;
-                        tweets.insertBefore( li, tweets.firstChild );
-
-                        // way more data here
-                        console.log("tweet", data);
-                    });
-                })
+            // service worker debug
+            new Worker('sw.js')
         </script>
     </body>
 </html>
